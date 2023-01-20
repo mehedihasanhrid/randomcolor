@@ -1,6 +1,6 @@
 const containerEl = document.querySelector(".container");
 
-for (let index = 0; index < 48; index++) {
+for (let i = 0; i< 48; i++) {
     const colorEl = document.createElement("div");
     colorEl.classList.add("box");
     containerEl.appendChild(colorEl);
@@ -19,11 +19,10 @@ function genColor(){
     }
 );
 }
-
 function randColor(){
     const chars = "0123456789abcdef";
     let color = "";
-    for (let index = 0; index < 6; index++) {
+    for (let i = 0; i < 6; i++) {
         const ranNum = Math.floor(Math.random()*16);
         color += chars.substring(ranNum , ranNum + 1);
     }
